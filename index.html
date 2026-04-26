@@ -743,14 +743,32 @@
       gap: 6px;
       margin-bottom: 24px;
       justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 420px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .filter-tab {
-      padding: 6px 14px;
+      padding: 8px 12px;
       font-size: 0.75rem;
       border-radius: 18px;
-      flex: 1;
-      min-width: 0;
       text-align: center;
+      min-height: 44px;
+      min-width: 0;
+      flex: 1 1 calc(33.333% - 4px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    .filter-tab:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px rgba(26,92,42,0.2);
     }
     
     .products-grid {
@@ -923,11 +941,15 @@
     }
     
     .filter-tabs {
-      flex-wrap: wrap;
+      max-width: 340px;
+      gap: 4px;
     }
     .filter-tab {
-      flex: 1 1 calc(50% - 3px);
-      min-width: calc(50% - 3px);
+      padding: 6px 8px;
+      font-size: 0.7rem;
+      min-height: 40px;
+      border-radius: 16px;
+      flex: 1 1 calc(33.333% - 3px);
     }
     
     .hero-stats {
