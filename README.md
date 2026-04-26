@@ -1,6 +1,88 @@
 # Tree Serum Bio Organic International
 
-A complete website for Tree Serum Bio Organic International, showcasing bio-organic biostimulants and crop-specific solutions for advanced agriculture.
+A modern, responsive website for Tree Serum Bio Organic International, showcasing bio-organic biostimulants and crop-specific solutions for advanced agriculture.
+
+## Website Overview
+
+**Tree Serum Bio Organic International** is a pioneering agricultural company based in Baramati, Pune, dedicated to transforming Indian agriculture through scientifically formulated bio-organic solutions. The website serves as a comprehensive digital platform showcasing their complete range of products and services.
+
+### Key Features
+
+- **🌿 Modern Responsive Design**: Fully responsive website with mobile-first approach
+- **🎨 Professional UI/UX**: Clean, nature-inspired design with green color palette
+- **📱 Mobile Optimized**: Seamless experience across all devices
+- **🚀 Fast Loading**: Optimized performance with minimal dependencies
+- **♿ Accessible**: WCAG-compliant design for inclusive user experience
+
+### Website Sections
+
+#### 🏠 Hero Section
+- **Tagline**: "One Step Towards Advanced Agriculture"
+- **Key Statistics**: 25+ unique products, 100% bio organic, ISO certified quality
+- **Call-to-Action**: Explore products and contact options
+- **Certifications**: ISO 9001:2015 and Biostimulant Certified (License No. LCBWD1120250090)
+
+#### 📖 About Us
+- **Company Philosophy**: "Quality, Service and Solution is everything for us" (गुणवत्ता, सेवा आणि समाधान हेच आमच्यासाठी सर्वकाही आहे)
+- **Core Values**: Crop-specific formulations, scientifically developed products, 100% bio organic solutions
+- **Location**: Baramati, Dist. Pune, Maharashtra
+
+#### 🌾 Product Categories
+- **Sugarcane**: 3-stage specialized products
+- **Banana**: Banana Special formulations
+- **Onion**: Onion Special solutions
+- **Guava**: Guava Special products
+- **Vegetables**: Tarkari Special range
+- **Flowers**: Serum Blossom for all flowers
+- **Universal**: Products suitable for all crops
+
+#### 🛒 Products Showcase
+- **Filter System**: Interactive product filtering by category
+- **Product Cards**: Detailed information including dosage, benefits, and crop compatibility
+- **25+ Products**: Complete range covering various agricultural needs
+
+#### ⭐ Why Choose Us
+- ISO 9001:2015 Certified quality management
+- 100% bio organic formulations
+- Crop-specific targeted solutions
+- Science-backed research and development
+- Proven yield increase results
+- Dedicated farmer support
+
+#### 📋 How to Use
+- Step-by-step application guide
+- Dosage recommendations (5-10 liters/acre for drip, 2-2.5 ml/liter for spray)
+- Best practices for optimal results
+- Compatibility with other treatments
+
+#### 📞 Contact Information
+- **Phone/WhatsApp**: 84 59 006 633
+- **Email**: Treeserum@gmail.com
+- **YouTube**: @TreeSerum-e6g
+- **Address**: Gat No.132/2, Plot No.23, Samyak Plaza, Shriram Nagar, Wadujkar Estate, MIDC, Baramati – 413133, Dist. Pune
+
+### Technical Implementation
+
+- **Technology**: Pure HTML5, CSS3, Vanilla JavaScript
+- **Design System**: Custom CSS with CSS variables for consistent theming
+- **Typography**: Google Fonts (Playfair Display, DM Sans)
+- **Color Scheme**: Nature-inspired green palette with yellow accents
+- **Animations**: Smooth CSS animations and transitions
+- **Performance**: Optimized for fast loading and smooth interactions
+
+### Target Audience
+
+- **Farmers**: Primary users seeking bio-organic agricultural solutions
+- **Agricultural Professionals**: Distributors and consultants
+- **Research Institutions**: Academic and research organizations
+- **Government Agencies**: Agricultural departments and extension services
+
+### Business Impact
+
+- **Digital Presence**: Professional online presence for global reach
+- **Lead Generation**: Contact forms and enquiry systems
+- **Product Information**: Comprehensive product catalog and specifications
+- **Brand Building**: Professional image and credibility in agricultural sector
 
 ## GitHub Pages Deployment
 
