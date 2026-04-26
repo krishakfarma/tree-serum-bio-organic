@@ -2,9 +2,31 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tree Serum Bio Organic International</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+<meta name="theme-color" content="#1a5c2a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="format-detection" content="telephone=no">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="msapplication-TileColor" content="#1a5c2a">
+<meta name="application-name" content="Tree Serum">
+<title>Tree Serum Bio Organic International | Bio-organic Agricultural Solutions</title>
+<meta name="description" content="Tree Serum Bio Organic International offers certified bio-organic biostimulants and crop-specific solutions for sugarcane, vegetables, fruits, and all crops. ISO 9001:2015 certified quality products for better yields.">
+<meta name="keywords" content="bio organic, biostimulant, sugarcane, agricultural solutions, Tree Serum, organic farming, crop specific, ISO certified">
+<meta name="author" content="Tree Serum Bio Organic International">
+<meta property="og:title" content="Tree Serum Bio Organic International">
+<meta property="og:description" content="Advanced bio-organic agricultural solutions for better yields and sustainable farming">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://i.ibb.co/Y7Pzsm4J/Tree-Serum-logo3.png">
+<meta property="og:url" content="#">
+<meta property="og:site_name" content="Tree Serum">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tree Serum Bio Organic International">
+<meta name="twitter:description" content="Advanced bio-organic agricultural solutions">
+<meta name="twitter:image" content="https://i.ibb.co/Y7Pzsm4J/Tree-Serum-logo3.png">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <style>
   :root {
     --green-dark: #1a5c2a;
@@ -50,6 +72,42 @@
     background: var(--yellow);
     display: flex; align-items: center; justify-content: center;
     font-size: 22px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .nav-logo-circle img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    border-radius: 4px;
+  }
+  
+  /* Touch-friendly interactions */
+  @media (hover: none) and (pointer: coarse) {
+    .filter-tab, .cat-card, .product-card, .why-card, .step, .contact-item {
+      -webkit-tap-highlight-color: rgba(245, 200, 66, 0.2);
+      touch-action: manipulation;
+    }
+    
+    .btn-primary, .btn-outline, .form-submit {
+      -webkit-tap-highlight-color: rgba(245, 200, 66, 0.3);
+      touch-action: manipulation;
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    .hamburger {
+      -webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
+      touch-action: manipulation;
+    }
+    
+    .mobile-menu a {
+      -webkit-tap-highlight-color: rgba(255, 255, 255, 0.1);
+      touch-action: manipulation;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+    }
   }
   .nav-brand { font-family: 'Playfair Display', serif; color: #fff; font-size: 1.18rem; font-weight: 700; line-height: 1.1; }
   .nav-brand span { display: block; font-family: 'DM Sans', sans-serif; font-size: 0.68rem; font-weight: 400; color: var(--green-light); letter-spacing: 1px; text-transform: uppercase; }
@@ -406,21 +464,485 @@
   .mobile-menu.open { display: flex; }
   .mobile-menu a { color: rgba(255,255,255,0.88); text-decoration: none; font-size: 1rem; font-weight: 500; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
 
-  /* RESPONSIVE */
-  @media (max-width: 900px) {
-    .hero-inner { grid-template-columns: 1fr; gap: 40px; text-align: center; }
-    .hero-buttons { justify-content: center; }
-    .hero-stats { grid-template-columns: repeat(4, 1fr); }
-    .about-inner { grid-template-columns: 1fr; gap: 40px; }
-    .about-accent { position: static; margin-top: 16px; display: inline-block; }
-    .contact-inner { grid-template-columns: 1fr; gap: 40px; }
-    .footer-top { grid-template-columns: 1fr; gap: 28px; }
+  /* RESPONSIVE DESIGN */
+  
+  /* Large Tablets (768px - 1024px) */
+  @media (max-width: 1024px) {
+    .hero-inner { max-width: 900px; }
+    .about-inner { max-width: 900px; }
+    .products-inner { max-width: 950px; }
+    .why-inner { max-width: 900px; }
+    .how-inner { max-width: 850px; }
+    .contact-inner { max-width: 850px; }
+  }
+  
+  /* Tablets (600px - 768px) */
+  @media (max-width: 768px) {
+    .nav { padding: 0 4%; height: 60px; }
+    .nav-logo-circle { width: 38px; height: 38px; font-size: 18px; }
+    .nav-brand { font-size: 1rem; }
+    .nav-brand span { font-size: 0.6rem; }
+    
+    .hero {
+      padding: 80px 4% 50px;
+      min-height: auto;
+    }
+    .hero-inner {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      text-align: center;
+      max-width: 700px;
+    }
+    .hero-title { font-size: clamp(2.2rem, 6vw, 3.2rem); }
+    .hero-sub { font-size: 1rem; margin-bottom: 28px; }
+    .hero-buttons { justify-content: center; gap: 12px; }
+    .btn-primary, .btn-outline { padding: 12px 24px; font-size: 0.9rem; }
+    
+    .hero-stats {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    .stat-card { padding: 16px 12px; }
+    .stat-num { font-size: 2rem; }
+    .stat-label { font-size: 0.75rem; }
+    .hero-cert { padding: 12px 16px; }
+    .cert-icon { font-size: 1.8rem; }
+    
+    section { padding: 70px 4%; }
+    .section-title { font-size: clamp(1.6rem, 4vw, 2.2rem); }
+    .section-sub { font-size: 0.95rem; }
+    
+    .about-inner {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      max-width: 700px;
+    }
+    .about-main-card { padding: 32px 28px; }
+    .about-accent {
+      position: static;
+      margin-top: 20px;
+      display: inline-block;
+    }
+    
+    .cat-grid {
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+    }
+    .cat-card { padding: 20px 16px; }
+    .cat-icon { font-size: 2.2rem; }
+    
+    .filter-tabs {
+      gap: 8px;
+      margin-bottom: 28px;
+    }
+    .filter-tab {
+      padding: 6px 16px;
+      font-size: 0.8rem;
+    }
+    
+    .products-grid {
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+    
+    .why-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 18px;
+    }
+    .why-card { padding: 22px 18px; }
+    
+    .steps { gap: 18px; }
+    .step { padding: 20px 22px; }
+    .step-num { width: 44px; height: 44px; font-size: 1.2rem; }
+    
+    .contact-inner {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      max-width: 700px;
+    }
+    
+    .footer-top {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    
     .nav-links, .nav-cta { display: none; }
     .hamburger { display: flex; }
   }
+  
+  /* Mobile Devices (320px - 600px) */
   @media (max-width: 600px) {
-    .hero-stats { grid-template-columns: 1fr 1fr; }
-    section { padding: 60px 5%; }
+    nav {
+      padding: 0 3%;
+      height: 56px;
+    }
+    .nav-logo-circle {
+      width: 34px;
+      height: 34px;
+      font-size: 16px;
+    }
+    .nav-brand {
+      font-size: 0.9rem;
+      line-height: 1.0;
+    }
+    .nav-brand span {
+      font-size: 0.55rem;
+      letter-spacing: 0.5px;
+    }
+    .hamburger span {
+      width: 22px;
+      height: 2px;
+    }
+    
+    .mobile-menu {
+      top: 56px;
+      padding: 16px 3%;
+    }
+    
+    .hero {
+      padding: 70px 3% 40px;
+    }
+    .hero-inner {
+      gap: 30px;
+    }
+    .hero-badge {
+      font-size: 0.7rem;
+      padding: 4px 12px;
+      margin-bottom: 16px;
+    }
+    .hero-title {
+      font-size: clamp(1.8rem, 8vw, 2.8rem);
+      margin-bottom: 14px;
+    }
+    .hero-sub {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .hero-buttons {
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .btn-primary, .btn-outline {
+      width: 100%;
+      max-width: 280px;
+      padding: 14px 24px;
+      text-align: center;
+    }
+    
+    .hero-stats {
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .stat-card {
+      padding: 12px 8px;
+      border-radius: 12px;
+    }
+    .stat-num {
+      font-size: 1.6rem;
+    }
+    .stat-label {
+      font-size: 0.7rem;
+      margin-top: 3px;
+    }
+    .hero-cert {
+      padding: 10px 12px;
+      border-radius: 12px;
+      gap: 10px;
+    }
+    .cert-icon {
+      font-size: 1.5rem;
+    }
+    .cert-text strong {
+      font-size: 0.85rem;
+    }
+    .cert-text span {
+      font-size: 0.7rem;
+    }
+    
+    section {
+      padding: 50px 3%;
+    }
+    .section-header {
+      margin-bottom: 35px;
+    }
+    .section-label {
+      font-size: 0.65rem;
+      padding: 4px 12px;
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-size: clamp(1.4rem, 6vw, 2rem);
+      margin-bottom: 10px;
+    }
+    .section-sub {
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    
+    .about-main-card {
+      padding: 24px 20px;
+      border-radius: 18px;
+    }
+    .about-main-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+    .about-main-card p {
+      font-size: 0.85rem;
+      line-height: 1.6;
+    }
+    .about-accent {
+      padding: 14px 18px;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .about-accent strong {
+      font-size: 1.2rem;
+    }
+    .about-accent span {
+      font-size: 0.65rem;
+    }
+    .about-feat {
+      padding: 12px 14px;
+      border-radius: 10px;
+      gap: 12px;
+    }
+    .feat-icon {
+      font-size: 1.4rem;
+    }
+    .feat-text strong {
+      font-size: 0.85rem;
+    }
+    .feat-text span {
+      font-size: 0.75rem;
+    }
+    
+    .cat-grid {
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+    }
+    .cat-card {
+      padding: 16px 12px;
+      border-radius: 12px;
+    }
+    .cat-icon {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+    .cat-name {
+      font-size: 0.85rem;
+      margin-bottom: 3px;
+    }
+    .cat-count {
+      font-size: 0.7rem;
+    }
+    
+    .filter-tabs {
+      gap: 6px;
+      margin-bottom: 24px;
+      justify-content: center;
+    }
+    .filter-tab {
+      padding: 6px 14px;
+      font-size: 0.75rem;
+      border-radius: 18px;
+      flex: 1;
+      min-width: 0;
+      text-align: center;
+    }
+    
+    .products-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    .product-card {
+      border-radius: 14px;
+    }
+    .product-header {
+      padding: 18px 16px 14px;
+    }
+    .product-emoji {
+      font-size: 2rem;
+      margin-bottom: 6px;
+    }
+    .product-name {
+      font-size: 1rem;
+    }
+    .product-tag {
+      font-size: 0.65rem;
+      padding: 2px 8px;
+      margin-top: 4px;
+    }
+    .product-body {
+      padding: 14px 16px;
+    }
+    .product-dose {
+      font-size: 0.7rem;
+      padding: 3px 8px;
+      margin-bottom: 10px;
+    }
+    .product-benefits li {
+      font-size: 0.8rem;
+      line-height: 1.4;
+      gap: 6px;
+    }
+    .product-footer {
+      padding: 12px 16px;
+    }
+    .product-crops {
+      font-size: 0.7rem;
+    }
+    
+    .why-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    .why-card {
+      padding: 20px 16px;
+      border-radius: 14px;
+    }
+    .why-icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+    .why-card h3 {
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+    }
+    .why-card p {
+      font-size: 0.8rem;
+      line-height: 1.5;
+    }
+    
+    .steps {
+      gap: 16px;
+    }
+    .step {
+      padding: 16px 18px;
+      border-radius: 12px;
+      gap: 16px;
+    }
+    .step-num {
+      width: 40px;
+      height: 40px;
+      font-size: 1.1rem;
+    }
+    .step-body h3 {
+      font-size: 0.9rem;
+      margin-bottom: 4px;
+    }
+    .step-body p {
+      font-size: 0.8rem;
+      line-height: 1.5;
+    }
+    
+    .contact-item {
+      padding: 14px 16px;
+      border-radius: 12px;
+      gap: 12px;
+    }
+    .contact-icon {
+      font-size: 1.3rem;
+      margin-top: 1px;
+    }
+    .contact-detail strong {
+      font-size: 0.75rem;
+      margin-bottom: 2px;
+    }
+    .contact-detail span {
+      font-size: 0.85rem;
+    }
+    
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      padding: 10px 14px;
+      font-size: 0.9rem;
+    }
+    .form-submit {
+      padding: 12px;
+      font-size: 0.9rem;
+    }
+    
+    footer {
+      padding: 36px 3% 20px;
+    }
+    .footer-top {
+      gap: 24px;
+    }
+    .footer-brand .nav-brand {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+    .footer-brand p {
+      font-size: 0.8rem;
+      margin-bottom: 12px;
+    }
+    .social-btn {
+      width: 32px;
+      height: 32px;
+      font-size: 0.9rem;
+    }
+    .footer-col h4 {
+      font-size: 0.75rem;
+      margin-bottom: 10px;
+    }
+    .footer-col ul li a {
+      font-size: 0.8rem;
+      padding: 4px 0;
+    }
+    .footer-bottom {
+      padding-top: 16px;
+      font-size: 0.75rem;
+      gap: 8px;
+    }
+    .iso-badge {
+      font-size: 0.65rem;
+      padding: 4px 10px;
+    }
+  }
+  
+  /* Small Mobile Devices (320px - 480px) */
+  @media (max-width: 480px) {
+    .hero-title {
+      font-size: clamp(1.6rem, 10vw, 2.4rem);
+    }
+    .hero-sub {
+      font-size: 0.85rem;
+    }
+    
+    .section-title {
+      font-size: clamp(1.2rem, 7vw, 1.8rem);
+    }
+    
+    .cat-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    
+    .filter-tabs {
+      flex-wrap: wrap;
+    }
+    .filter-tab {
+      flex: 1 1 calc(50% - 3px);
+      min-width: calc(50% - 3px);
+    }
+    
+    .hero-stats {
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .stat-card {
+      padding: 10px 6px;
+    }
+    .stat-num {
+      font-size: 1.4rem;
+    }
+    .stat-label {
+      font-size: 0.65rem;
+    }
   }
 </style>
 </head>
@@ -571,6 +1093,7 @@
       <div class="cat-card"><span class="cat-icon">🧅</span><div class="cat-name">Onion</div><div class="cat-count">Onion Special</div></div>
       <div class="cat-card"><span class="cat-icon">🍈</span><div class="cat-name">Guava</div><div class="cat-count">Guava Special</div></div>
       <div class="cat-card"><span class="cat-icon">🍅</span><div class="cat-name">Vegetables</div><div class="cat-count">Tarkari Special</div></div>
+      <div class="cat-card"><span class="cat-icon">🥔</span><div class="cat-name">Ginger & Turmeric</div><div class="cat-count">Ginger Special</div></div>
       <div class="cat-card"><span class="cat-icon">🌸</span><div class="cat-name">All Flowers</div><div class="cat-count">Serum Blossom</div></div>
       <div class="cat-card"><span class="cat-icon">🌳</span><div class="cat-name">All Crops</div><div class="cat-count">Universal Products</div></div>
     </div>
@@ -856,18 +1379,275 @@ function renderProducts(filter = 'all') {
   `).join('');
 }
 
+// Store user's current filter choice and only reset when appropriate
+let userSelectedFilter = 'all';
+let hasInteractedWithProducts = false;
+
 function filterProducts(cat, btn) {
   document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
+  userSelectedFilter = cat;
+  hasInteractedWithProducts = true;
   renderProducts(cat);
 }
+
+// Only reset to 'All Products' when user navigates away from products section and comes back much later
+let lastScrollY = window.scrollY;
+let timeLeftProducts = 0;
+window.addEventListener('scroll', () => {
+  const currentScrollY = window.scrollY;
+  const productsSection = document.getElementById('products');
+  const scrollDirection = currentScrollY > lastScrollY ? 'down' : 'up';
+  
+  if (productsSection) {
+    const rect = productsSection.getBoundingClientRect();
+    const isInView = rect.top < window.innerHeight && rect.bottom > 0;
+    
+    // Record when user leaves products section
+    if (!isInView && timeLeftProducts === 0) {
+      timeLeftProducts = Date.now();
+    }
+    
+    // Reset filter only if user has been away for more than 10 seconds AND hasn't recently interacted
+    if (isInView && timeLeftProducts > 0 && hasInteractedWithProducts) {
+      const timeAway = Date.now() - timeLeftProducts;
+      if (timeAway > 10000) { // 10 seconds
+        const allProductsBtn = document.querySelector('.filter-tab');
+        if (allProductsBtn && !allProductsBtn.classList.contains('active')) {
+          document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
+          allProductsBtn.classList.add('active');
+          renderProducts('all');
+          userSelectedFilter = 'all';
+          hasInteractedWithProducts = false;
+        }
+      }
+      timeLeftProducts = 0;
+    }
+  }
+  
+  lastScrollY = currentScrollY;
+});
 
 function toggleMenu() {
   document.getElementById('mobileMenu').classList.toggle('open');
 }
 
 function submitForm() {
-  alert('Thank you for your enquiry! We will contact you shortly on WhatsApp or phone.\n\nYou can also reach us directly:\n📞 84 59 006 633\n✉️ Treeserum@gmail.com');
+  // Get form elements
+  const form = document.querySelector('.contact-form');
+  const nameInput = form.querySelector('input[type="text"]');
+  const phoneInput = form.querySelector('input[type="tel"]');
+  const cropSelect = form.querySelector('select');
+  const messageTextarea = form.querySelector('textarea');
+  const submitBtn = form.querySelector('.form-submit');
+  
+  // Get form values
+  const name = nameInput.value.trim();
+  const phone = phoneInput.value.trim();
+  const crop = cropSelect.value;
+  const message = messageTextarea.value.trim();
+  
+  // Validation
+  let errors = [];
+  
+  if (!name) {
+    errors.push('Please enter your name');
+    nameInput.style.borderColor = '#e74c3c';
+  } else {
+    nameInput.style.borderColor = '#e0eee2';
+  }
+  
+  if (!phone) {
+    errors.push('Please enter your phone number');
+    phoneInput.style.borderColor = '#e74c3c';
+  } else if (!/^[6-9]\d{9}$/.test(phone.replace(/\D/g, ''))) {
+    errors.push('Please enter a valid 10-digit mobile number');
+    phoneInput.style.borderColor = '#e74c3c';
+  } else {
+    phoneInput.style.borderColor = '#e0eee2';
+  }
+  
+  if (!crop) {
+    errors.push('Please select your crop type');
+    cropSelect.style.borderColor = '#e74c3c';
+  } else {
+    cropSelect.style.borderColor = '#e0eee2';
+  }
+  
+  if (!message) {
+    errors.push('Please enter your message or query');
+    messageTextarea.style.borderColor = '#e74c3c';
+  } else {
+    messageTextarea.style.borderColor = '#e0eee2';
+  }
+  
+  // Show errors if any
+  if (errors.length > 0) {
+    showNotification('Please fill in all required fields correctly:\n\n' + errors.join('\n'), 'error');
+    return;
+  }
+  
+  // Show loading state
+  const originalText = submitBtn.innerHTML;
+  submitBtn.innerHTML = '🔄 Sending...';
+  submitBtn.disabled = true;
+  
+  // Prepare WhatsApp message
+  const whatsappMessage = encodeURIComponent(
+    `***NEW FARMING ENQUIRY - Tree Serum***\n\n` +
+    `*Name:* ${name}\n` +
+    `*Phone:* ${phone}\n` +
+    `*Crop Type:* ${crop}\n` +
+    `*Message:* ${message}\n\n` +
+    `*Enquiry Date:* ${new Date().toLocaleDateString('en-IN')}\n` +
+    `*Time:* ${new Date().toLocaleTimeString('en-IN')}\n\n` +
+    `*Please contact this farmer for their agricultural needs.*\n\n` +
+    `---\n` +
+    `Tree Serum Bio Organic International\n` +
+    `ISO 9001:2015 Certified | 100% Bio Organic`
+  );
+  
+  // WhatsApp number (remove spaces and special characters)
+  const whatsappNumber = '918459006633'; // 84 59 006 633
+  
+  // Create WhatsApp URL
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+  
+  // Also prepare email (as backup)
+  const emailSubject = encodeURIComponent('Farming Enquiry - Tree Serum Bio Organic');
+  const emailBody = encodeURIComponent(
+    `New Farming Enquiry Details:\n\n` +
+    `Name: ${name}\n` +
+    `Phone: ${phone}\n` +
+    `Crop Type: ${crop}\n` +
+    `Message: ${message}\n\n` +
+    `Date: ${new Date().toLocaleDateString('en-IN')}\n` +
+    `Time: ${new Date().toLocaleTimeString('en-IN')}`
+  );
+  const emailUrl = `mailto:Treeserum@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+  
+  // Try to open WhatsApp first
+  setTimeout(() => {
+    const whatsappWindow = window.open(whatsappUrl, '_blank');
+    
+    // Check if WhatsApp opened successfully
+    setTimeout(() => {
+      if (whatsappWindow && !whatsappWindow.closed) {
+        // WhatsApp opened successfully
+        showNotification('✅ WhatsApp opened! Please send the message to complete your enquiry.\n\nIf WhatsApp doesn\'t work, you can also email us directly.', 'success');
+        resetForm(form);
+      } else {
+        // WhatsApp blocked, try email
+        window.open(emailUrl, '_blank');
+        showNotification('� Email opened! Please send the email to complete your enquiry.\n\nYou can also call us directly at 84 59 006 633.', 'success');
+        resetForm(form);
+      }
+      
+      // Reset button
+      submitBtn.innerHTML = originalText;
+      submitBtn.disabled = false;
+    }, 1000);
+  }, 500);
+}
+
+function resetForm(form) {
+  // Clear form fields
+  form.querySelectorAll('input, textarea').forEach(field => {
+    field.value = '';
+    field.style.borderColor = '#e0eee2';
+  });
+  form.querySelector('select').value = '';
+}
+
+function showNotification(message, type = 'info') {
+  // Remove existing notification if any
+  const existingNotification = document.querySelector('.notification');
+  if (existingNotification) {
+    existingNotification.remove();
+  }
+  
+  // Create notification element
+  const notification = document.createElement('div');
+  notification.className = `notification notification-${type}`;
+  notification.innerHTML = `
+    <div class="notification-content">
+      <div class="notification-message">${message.replace(/\n/g, '<br>')}</div>
+      <button class="notification-close" onclick="this.parentElement.parentElement.remove()">×</button>
+    </div>
+  `;
+  
+  // Add styles
+  notification.style.cssText = `
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    left: 20px;
+    max-width: 500px;
+    background: ${type === 'error' ? '#e74c3c' : type === 'success' ? '#27ae60' : '#3498db'};
+    color: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    z-index: 10000;
+    animation: slideIn 0.3s ease;
+  `;
+  
+  // Add notification styles to head if not already added
+  if (!document.querySelector('#notification-styles')) {
+    const style = document.createElement('style');
+    style.id = 'notification-styles';
+    style.textContent = `
+      @keyframes slideIn {
+        from { transform: translateY(-20px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+      }
+      .notification-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 12px;
+      }
+      .notification-message {
+        flex: 1;
+        line-height: 1.4;
+      }
+      .notification-close {
+        background: rgba(255,255,255,0.2);
+        border: none;
+        color: white;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s;
+      }
+      .notification-close:hover {
+        background: rgba(255,255,255,0.3);
+      }
+      @media (max-width: 600px) {
+        .notification {
+          right: 10px;
+          left: 10px;
+          font-size: 14px;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  }
+  
+  // Add to page
+  document.body.appendChild(notification);
+  
+  // Auto-remove after 8 seconds
+  setTimeout(() => {
+    if (notification.parentElement) {
+      notification.remove();
+    }
+  }, 8000);
 }
 
 renderProducts();
