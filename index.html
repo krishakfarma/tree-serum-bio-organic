@@ -14,6 +14,9 @@
 <meta name="description" content="Tree Serum Bio Organic International offers certified bio-organic biostimulants and crop-specific solutions for sugarcane, vegetables, fruits, and all crops. ISO 9001:2015 certified quality products for better yields.">
 <meta name="keywords" content="bio organic, biostimulant, sugarcane, agricultural solutions, Tree Serum, organic farming, crop specific, ISO certified">
 <meta name="author" content="Tree Serum Bio Organic International">
+<link rel="alternate" hreflang="en" href="https://treeserum.com">
+<link rel="alternate" hreflang="mr" href="https://treeserum.com">
+<link rel="alternate" hreflang="x-default" href="https://treeserum.com">
 <meta property="og:title" content="Tree Serum Bio Organic International">
 <meta property="og:description" content="Advanced bio-organic agricultural solutions for better yields and sustainable farming">
 <meta property="og:type" content="website">
@@ -26,7 +29,7 @@
 <meta name="twitter:image" content="https://i.ibb.co/Y7Pzsm4J/Tree-Serum-logo3.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=Noto+Sans+Devanagari:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -46,6 +49,7 @@
     <li><a href="#how">How to Use</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+  <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()" data-lang="en">EN</button>
   <a href="#contact" class="nav-cta">Enquire Now</a>
   <div class="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
@@ -323,8 +327,8 @@
         <div class="contact-item">
           <div class="contact-icon">📍</div>
           <div class="contact-detail">
-            <strong>Address</strong>
-            <span>Gat No.132/2, Plot No.23, Samyak Plaza, Shriram Nagar, Wadujkar Estate, MIDC, Baramati – 413133, Dist. Pune</span>
+            <strong data-translate="contact.address">Address</strong>
+            <span data-translate="contact.addressInfo.fullAddress">Gat No.132/2, Plot No.23, Samyak Plaza, Shriram Nagar, Wadujkar Estate, MIDC, Baramati – 413133, Dist. Pune</span>
           </div>
         </div>
       </div>
@@ -407,6 +411,8 @@
   </div>
 </footer>
 
+<script src="js/translations.js"></script>
+<script src="js/language-switcher.js"></script>
 <script src="js/data.js"></script>
 <script src="js/nav.js"></script>
 <script src="js/products.js"></script>

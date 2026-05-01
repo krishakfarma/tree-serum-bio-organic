@@ -9,17 +9,17 @@ function renderProducts(filter = 'all') {
     ? `<img src="${p.image}" class="product-img">` 
     : `<span class="product-emoji">${p.emoji || "🌿"}</span>`
 } 
-        <div class="product-name">${p.name}</div>
-        <span class="product-tag">${p.tag}</span>
+        <div class="product-name">${p.name[window.currentLanguage] || p.name.en}</div>
+        <span class="product-tag">${p.tag[window.currentLanguage] || p.tag.en}</span>
       </div>
       <div class="product-body">
-        <div class="product-dose">📏 Dose: ${p.dose}</div>
+        <div class="product-dose">📏 ${t('products.dose')} ${p.dose[window.currentLanguage] || p.dose.en}</div>
         <ul class="product-benefits">
-          ${p.benefits.map(b => `<li>${b}</li>`).join('')}
+          ${(p.benefits[window.currentLanguage] || p.benefits.en).map(b => `<li>${b}</li>`).join('')}
         </ul>
       </div>
       <div class="product-footer">
-        <span class="product-crops">🌾 Suitable for: ${p.crops}</span>
+        <span class="product-crops">🌾 ${t('products.suitableFor')} ${p.crops[window.currentLanguage] || p.crops.en}</span>
       </div>
     </div>
   `).join('');

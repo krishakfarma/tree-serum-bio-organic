@@ -17,31 +17,31 @@ function submitForm() {
   let errors = [];
   
   if (!name) {
-    errors.push('Please enter your name');
+    errors.push(t('form.nameRequired'));
     nameInput.style.borderColor = '#e74c3c';
   } else {
     nameInput.style.borderColor = '#e0eee2';
   }
   
   if (!phone) {
-    errors.push('Please enter your phone number');
+    errors.push(t('form.phoneRequired'));
     phoneInput.style.borderColor = '#e74c3c';
   } else if (!/^[6-9]\d{9}$/.test(phone.replace(/\D/g, ''))) {
-    errors.push('Please enter a valid 10-digit mobile number');
+    errors.push(t('form.phoneValid'));
     phoneInput.style.borderColor = '#e74c3c';
   } else {
     phoneInput.style.borderColor = '#e0eee2';
   }
   
   if (!crop) {
-    errors.push('Please select your crop type');
+    errors.push(t('form.cropRequired'));
     cropSelect.style.borderColor = '#e74c3c';
   } else {
     cropSelect.style.borderColor = '#e0eee2';
   }
   
   if (!message) {
-    errors.push('Please enter your message or query');
+    errors.push(t('form.messageRequired'));
     messageTextarea.style.borderColor = '#e74c3c';
   } else {
     messageTextarea.style.borderColor = '#e0eee2';
@@ -49,7 +49,7 @@ function submitForm() {
   
   // Show errors if any
   if (errors.length > 0) {
-    showNotification('Please fill in all required fields correctly:\n\n' + errors.join('\n'), 'error');
+    showNotification(t('form.fillAllFields') + '\n\n' + errors.join('\n'), 'error');
     return;
   }
   
@@ -100,12 +100,12 @@ function submitForm() {
     setTimeout(() => {
       if (whatsappWindow && !whatsappWindow.closed) {
         // WhatsApp opened successfully
-        showNotification('✅ WhatsApp opened! Please send the message to complete your enquiry.\n\nIf WhatsApp doesn\'t work, you can also email us directly.', 'success');
+        showNotification(t('form.whatsappSuccess'), 'success');
         resetForm(form);
       } else {
         // WhatsApp blocked, try email
         window.open(emailUrl, '_blank');
-        showNotification('� Email opened! Please send the email to complete your enquiry.\n\nYou can also call us directly at 84 59 006 633.', 'success');
+        showNotification(t('form.emailSuccess'), 'success');
         resetForm(form);
       }
       

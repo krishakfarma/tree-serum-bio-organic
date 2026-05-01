@@ -22,6 +22,11 @@
     color: var(--text-dark);
     overflow-x: hidden;
   }
+  
+  /* Marathi language font support */
+  body[lang="mr"], .marathi-text {
+    font-family: 'Noto Sans Devanagari', 'DM Sans', sans-serif;
+  }
 
   /* NAV */
   nav {
@@ -84,6 +89,24 @@
   .nav-links { display: flex; gap: 28px; list-style: none; }
   .nav-links a { color: rgba(255,255,255,0.88); text-decoration: none; font-size: 0.93rem; font-weight: 500; transition: color 0.2s; }
   .nav-links a:hover { color: var(--yellow); }
+  .language-toggle {
+    background: rgba(255,255,255,0.15); color: white; font-weight: 600;
+    padding: 8px 16px; border-radius: 20px; border: 2px solid rgba(255,255,255,0.3);
+    font-size: 0.85rem; transition: all 0.2s; cursor: pointer;
+    white-space: nowrap; min-width: 50px; text-align: center;
+    backdrop-filter: blur(4px);
+  }
+  .language-toggle:hover { 
+    background: rgba(255,255,255,0.25); 
+    border-color: rgba(255,255,255,0.5);
+    transform: translateY(-1px); 
+  }
+  .language-toggle[data-lang="mr"] {
+    background: var(--yellow); color: var(--green-dark); border-color: var(--yellow);
+  }
+  .language-toggle[data-lang="mr"]:hover {
+    background: #ffe07a; border-color: #ffe07a;
+  }
   .nav-cta {
     background: var(--yellow); color: var(--green-dark); font-weight: 700;
     padding: 8px 22px; border-radius: 24px; text-decoration: none;
@@ -934,6 +957,13 @@
     }
     .stat-label {
       font-size: 0.65rem;
+    }
+    
+    /* Language toggle mobile adjustments */
+    .language-toggle {
+      padding: 6px 12px;
+      font-size: 0.75rem;
+      min-width: 44px;
     }
   }
 
